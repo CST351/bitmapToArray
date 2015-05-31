@@ -6,8 +6,8 @@ A C++ program that takes a bitmap RGB565 and converts it to an array in Verilog 
 
 Only supports RGB565 bmp files,
 
-The reason for this is because the tft display used in 
-the class this was developed for only supportsRGB565
+This is because the tft display this was 
+developed for only supports RGB565
 
 This program was developed in visual studios,
 but should compile using gcc just fine.
