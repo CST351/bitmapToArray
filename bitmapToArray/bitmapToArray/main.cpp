@@ -33,7 +33,6 @@ int main(int argv, char* argc[])
 	{
 		cout << "Enter file name: ";
 		cin >> filename;
-		filename = "C:\\Users\\Cory\\Documents\\GitHub\\bitmapToArray\\bitmapToArray\\Debug\\" + filename;
 	}
 	else
 		filename = argc[1];
@@ -129,8 +128,6 @@ int main(int argv, char* argc[])
 					fileOut <<"16'h"  << (int) buffer[(row + col )] << (int) buffer[row + (col-1) ]; 
 					if (i != (width-1) || j != 1)
 						fileOut <<", ";
-					else
-						int g = 3;
 				}
 
 				fileOut << "\n";
