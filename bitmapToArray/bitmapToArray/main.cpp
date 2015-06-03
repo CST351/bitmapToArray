@@ -33,7 +33,7 @@ int main(int argv, char* argc[])
 	{
 		cout << "Enter file name: ";
 		cin >> filename;
-		//filename = "C:\\Users\\Cory\\Desktop\\bitmapToArray\\Debug\\" + filename;
+		filename = "C:\\Users\\Cory\\Documents\\GitHub\\bitmapToArray\\bitmapToArray\\Debug\\" + filename;
 	}
 	else
 		filename = argc[1];
@@ -127,8 +127,10 @@ int main(int argv, char* argc[])
 					int col = (i*2)-1; //zero indexed col
 					
 					fileOut <<"16'h"  << (int) buffer[(row + col )] << (int) buffer[row + (col-1) ]; 
-					if (i != 1 || j != 1)
+					if (i != (width-1) || j != 1)
 						fileOut <<", ";
+					else
+						int g = 3;
 				}
 
 				fileOut << "\n";
@@ -139,6 +141,8 @@ int main(int argv, char* argc[])
 
 			fileOut << "\tassign width  = " << width << ";\n";
 			fileOut << "\tassign height = " << height << ";\n\n";
+			fileOut << "\t//assign width  = " << (width-1) << ";\tfor 0 indexed width\n";
+			fileOut << "\t//assign height = " << (height-1) << ";\tfor 0 indexed Height\n\n";
 			fileOut << "\tassign color  = image[pixel];\n";
 
 			fileOut << "\nendmodule\n";

@@ -1,19 +1,19 @@
 //---Example Use---
-// C:\Users\Cory\Desktop\bitmapToArray\Debug\test image1 (
+// C:\Users\Cory\Documents\GitHub\bitmapToArray\bitmapToArray\Debug\test image1 (
 //	.pixel(),
-//	.color()
-//	.width()
+//	.color(),
+//	.width(),
 //	.height()
 //);
 
-module C:\Users\Cory\Desktop\bitmapToArray\Debug\test (
+module C:\Users\Cory\Documents\GitHub\bitmapToArray\bitmapToArray\Debug\test (
 	input wire [16:0] pixel,
 	output wire [8:0] width, height,
 	output reg [15:0] color
 );
 
 	reg [15:0] image [927:0] = '{
-00		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'h2082, 16'hffff, 16'hffff, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
+		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'h2082, 16'hffff, 16'hffff, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
 		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'h2082, 16'hffff, 16'h2082, 16'hed8d, 16'h2082, 16'hffff, 16'h2082, 16'h8b2, 16'hb3c6, 16'hdc8b, 16'hed8d, 16'hed8d, 16'hdc8b, 16'hb3c6, 16'h8b2, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
 		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'hdc8b, 16'h8b2, 16'h2082, 16'hed8d, 16'hdc8b, 16'h5a4, 16'h2082, 16'hb3c6, 16'hed8d, 16'hed8d, 16'hed8d, 16'hdc8b, 16'hb3c6, 16'h8b2, 16'h5a4, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
 		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'hed8d, 16'hb3c6, 16'h5a4, 16'hfe90, 16'hdc8b, 16'hdc8b, 16'h5a4, 16'h7283, 16'h8b2, 16'hb3c6, 16'hdc8b, 16'hfe90, 16'hfe90, 16'hed8d, 16'hdc8b, 16'h8b2, 16'h2082, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
@@ -44,11 +44,14 @@ module C:\Users\Cory\Desktop\bitmapToArray\Debug\test (
 		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'h700, 16'h700, 16'h700, 16'h2082, 16'hfc9, 16'hfc9, 16'hfc9, 16'hfc9, 16'h2082, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
 		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'hd347, 16'hd347, 16'h825, 16'h2082, 16'h982, 16'h982, 16'h982, 16'h982, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
 		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'h2082, 16'h2082, 16'h2082, 16'haa86, 16'hfc9, 16'hfc9, 16'hfc9, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
-		16'hffff16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'h825, 16'hd347, 16'hfc9, 16'hd347, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 
+		16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'h2082, 16'h825, 16'hd347, 16'hfc9, 16'hd347, 16'h2082, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff, 16'hffff
 };
 
 	assign width  = 29;
 	assign height = 32;
+
+	//assign width  = 28;	for 0 indexed width
+	//assign height = 31;	for 0 indexed Height
 
 	assign color  = image[pixel];
 
