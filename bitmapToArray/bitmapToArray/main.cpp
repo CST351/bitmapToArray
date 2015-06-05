@@ -120,13 +120,13 @@ int main(int argv, char* argc[])
 			{
 				int row = (((width)+padding)*(j-1)*2);
 				fileOut << "\t\t";
-				for (int i = 1; i < width; i++)
+				for (int i = 1; i <= width; i++)
 				{
 					
 					int col = (i*2)-1; //zero indexed col
 					
 					fileOut <<"16'h"  << (int) buffer[(row + col )] << (int) buffer[row + (col-1) ]; 
-					if (i != (width-1) || j != 1)
+					if (i != (width) || j != 1)
 						fileOut <<", ";
 				}
 

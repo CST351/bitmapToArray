@@ -1,4 +1,4 @@
-﻿Build started 6/2/2015 11:52:07 PM.
+﻿Build started 6/5/2015 10:48:32 AM.
      1>Project "C:\Users\Cory\Documents\GitHub\bitmapToArray\bitmapToArray\bitmapToArray\bitmapToArray.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -14,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.13
+Time Elapsed 00:00:01.22
